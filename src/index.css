@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -13,9 +15,10 @@
   --clr-secondary: rgb(25, 33, 90);
 
   --ff-primary: 'Helvetica, Arial, sans-serif';
+  --ff-secondary: 'Montserrat', sans-serif;
 
   --fw-regular: 400;
-  --fw-bold: 600;
+  --fw-bold: 700;
 }
 
 html {
@@ -75,4 +78,96 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 1rem;
+}
+
+/* Main Component */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main {
+  flex: 3 75%;
+}
+
+.sidebar {
+  flex: 1 25%;
+}
+
+/* Products Component */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.products li {
+  flex: 1 1 32rem;
+  height: auto;
+  padding: 2rem;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.products img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.product-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.product-price div, .product-price button {
+  text-align: center;
+}
+
+.price {
+  width: 50%;
+}
+
+.product-price div {
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+}
+
+.product-price .btn {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  background-color: var(--clr-secondary);
+  border: 2px solid var(--clr-secondary);
+  color: var(--clr-light);
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-bold);
+}
+
+.product-price .btn:hover {
+  background-color: var(--clr-light);
+  border: 2px solid var(--clr-secondary);
+  color: var(--clr-secondary);
+  font-weight: var(--fw-bold);
+}
+
+.product a {
+  text-decoration: none;
+}
+
+.product a p {
+  padding-top: 0.25rem;
+  padding-bottom: 1rem;
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-bold);
 }
